@@ -1,2 +1,6 @@
-﻿class profile::enablerdp {
+class profile::enablerdp {
+    class {'rdp':
+        rdp_enable => 'true',
+        rdp_nla_enable => 'true',
+    }
 }
