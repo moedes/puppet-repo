@@ -1,3 +1,5 @@
-class profile::iis { 'Web-Server':
+class profile::iis { 
+  class windowsfeature {'Web-Server':
   ensure => present,
-}
+  }
+}  
