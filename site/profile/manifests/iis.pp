@@ -3,6 +3,6 @@ class profile::iis {
     ensure => present,
   }
   reboot {'after IIS Installed':
-    subscribe => windowsfeature,
+    when => 'pending',
   }
 }  
