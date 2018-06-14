@@ -1,5 +1,8 @@
 class profile::iis { 
   windowsfeature { 'Web-WebServer':
-    ensure => absent,
+    ensure => present,
+  }
+  reboot {'after IIS Installed':
+    subscribe => windowsfeature,
   }
 }  
