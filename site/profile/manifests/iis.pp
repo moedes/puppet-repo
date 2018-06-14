@@ -1,5 +1,5 @@
 class profile::iis { 
   windowsfeature { 'Web-WebServer':
-    ensure => present,
+    ensure => absent,
   }
 }  
