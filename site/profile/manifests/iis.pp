@@ -4,5 +4,6 @@ class profile::iis {
   }
   reboot {'after IIS Installed':
     when => 'pending',
+    unless => 'windows_auto_update',
   }
 }  
